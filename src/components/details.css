@@ -1,0 +1,69 @@
+.prodetails .single-pro-image {
+    width: 33%;
+    margin: 50px;
+}
+
+.small-image-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-column {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+.prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+.prodetails .single-pro-details h4 {
+    padding: 0px 0 0px 0;
+}
+
+.prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+.prodetails .single-pro-details .select {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    width: 150px;
+}
+
+.prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+ .AddTOCART {
+    background-color: #008178;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 18px;
+    font-size: 600;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.prodetails .single-pro-details input:focus {
+    outline: none;
+
+}
+
+.prodetails .single-pro-details span {
+    font-size: 20px;
+}
