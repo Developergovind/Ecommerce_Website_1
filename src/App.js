@@ -13,7 +13,7 @@ import Login from "./pages/Authentication/login";
 import SignUp from "./pages/Authentication/signUp";
 
 function App() {
-   
+
   return (
     <div className="App">
       <Router>
