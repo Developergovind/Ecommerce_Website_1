@@ -14,8 +14,9 @@ function SearchProducts() {
     return (
         <React.Fragment>
             <section className="product1 section-p1">
-                <div className="pro-container">
-                    {products && products.map((item, index) => {
+                <div className="pro-container"> 
+                    {
+                    products && products.map((item, index) => {
                         return (
                             <>
                                 <div className="pro">

@@ -10,4 +10,4 @@ function AboutUsBanner() {
         </React.Fragment>
     );
 }
-export default AboutUsBanner
+export default AboutUsBanner 

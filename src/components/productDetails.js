@@ -11,7 +11,7 @@ function MenProducts() {
         const data = await getProductDetails(id)
         setProductDetails(data.productDescription[0])
         setProductImages(data.productImages)
-    }
+    }  
     useEffect(() => {
         getproduct_Details();
     }, [])

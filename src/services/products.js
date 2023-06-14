@@ -13,10 +13,10 @@ export const getProducts = async (id) => {
 }
 export const getProductDetails = async (id) => {
     try {
-        let response = await axios.post(`${obj.BASE_URL}/productdetails`,
-            {
-                product_id: id
-            })
+        let response = await axios.post(`${obj.BASE_URL}/productdetails/${id}`)
+            // {
+            //     product_id: id
+            // })
         return response.data.data;
     } catch (error) {
         console.log(error);
