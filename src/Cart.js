@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import CartBanner from './components/CartBanner';
 import Cartdetails  from './components/cart'
-import AddToCart from './components/AddTocart';
+import AddToCart from './components/cartDetails';
 import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
 

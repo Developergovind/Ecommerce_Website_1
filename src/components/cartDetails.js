@@ -1,9 +1,11 @@
 import React from "react";
 import "./web.css"
+import { Link } from "react-router-dom";
 function AddToCart() {
     return (
         <React.Fragment>
-            <section className="cart-add section-p1" >
+           <div className="container">
+           <section className="cart-add section-p1" >
                 <div className="coupon">
                     <h3>Apply coupon</h3>
                     <div>
@@ -27,9 +29,10 @@ function AddToCart() {
                             <td><strong>$334</strong></td>
                         </tr>
                     </table>
-                    <button>Procced to Checkout</button>
+                  <Link to={"/checkout"}><button>Procced to Checkout</button></Link>
                 </div>
             </section>
+           </div>
         </React.Fragment>
     );
 }

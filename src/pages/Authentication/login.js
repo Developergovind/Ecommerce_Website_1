@@ -1,10 +1,12 @@
 import React from "react";
 import '../../components/web.css'
 import { Link } from "react-router-dom";
+import Header from '../../components/Header'
  function Login()  {
+    
     return (
         <React.Fragment>
-
+              <Header> </Header>
             <section className="h-50 ">
                 <div className="container h-50">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -49,12 +51,13 @@ import { Link } from "react-router-dom";
                                                     placeholder="Password"
                                                 />
                                             </div>
-                                            <div className="d-flex justify-content-center pt-3">
+                                            <div className="d-flex mt-4 pt-3">
                                                 <button type="button" className="btn normalButton btn-lg ms-2">
                                                     Login
                                                 </button>
+                                                <Link style={{textDecoration:"none"}} to="/forgotpassword"> <span style={{color: "#008178", cursor:"pointer",fontSize:"20px",marginLeft:"10px"}}>Forgot Your Password</span> </Link>
                                             </div>
-                                            <div className="d-flex justify-content-center pt-3">
+                                            <div className="d-flex justify-content-center mt-5 pt-3">
                                                 <h4>Don't have an account ? <Link style={{textDecoration:"none"}} to="/signUp"> <span style={{color: "#008178", cursor:"pointer"}}>Sign Up</span> </Link> </h4>
                                             </div>
                                         

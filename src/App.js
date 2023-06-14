@@ -11,6 +11,8 @@ import WomenProducts from "./pages/WomenProduct";
 import ProductDetails from "./pages/productDetails";
 import Login from "./pages/Authentication/login";
 import SignUp from "./pages/Authentication/signUp";
+import Forgotpassword from "./pages/Authentication/forgotpassword";
+import CheckOut from "../src/components/checkout";
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
         <Route path="/productdetails" element={<ProductDetails/>} />
         <Route path="/login" element={<Login/>} />   
         <Route path="/signUp" element={<SignUp/>} />   
+        <Route path="/forgotpassword" element={<Forgotpassword/>} />   
+        <Route path="/checkout" element={<CheckOut/>} />   
       </Routes>
     </Router>
     </div>

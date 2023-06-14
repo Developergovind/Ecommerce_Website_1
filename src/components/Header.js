@@ -14,7 +14,7 @@ function Header() {
     }
     const Searchedvalue = async () => {
         const data = await productSearch(searchValue)
-        localStorage.setItem("productData",JSON.stringify(data));
+        localStorage.setItem("productData",JSON.stringify(data));                      
         Navigate("/Shop")
         console.log("hello ", data);
     }

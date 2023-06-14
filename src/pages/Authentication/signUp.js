@@ -1,8 +1,49 @@
 import React from "react";
 import '../../components/web.css'
-function signUp() {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import Header from '../../components/Header'
+import { SignUP } from "../../services/products";
+function SignUp() {
+    function addFirtName(e) {
+        const first_name = e.target.value;
+        setFirstName(first_name)
+    }
+    function addLastName(e) {
+        const last_name = e.target.value;
+        setLastName(last_name)
+    }
+    function addEmail(e) {
+        const email = e.target.value;
+        setEmail(email)
+    }
+    function addCountryCode(e) {
+        const country_code = e.target.value;
+        setCountryCode(country_code)
+    }
+    function addPhone(e) {
+        const phone = e.target.value;
+        setPhone(phone)
+    }
+    function addPassword(e) {
+        const password = e.target.value;
+        setPassword(password)
+    }
+  
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState("")
+    const [email, setEmail] = useState("")
+    const [countryCode, setCountryCode] = useState("")
+    const [phone, setPhone] = useState("")
+    const [password, setPassword] = useState("")
+
+    const handleSubmit = async () =>{
+       const signUp = await SignUP(firstName,lastName,email,countryCode,phone,password)
+       console.log(signUp);
+    }
     return (
         <React.Fragment>
+            <Header> </Header>
             <section className="h-100 ">
                 <div className="container  h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -34,6 +75,9 @@ function signUp() {
                                                     id="form3Example90"
                                                     className="form-control form-control-lg"
                                                     placeholder="First Name"
+                                                    name="first_name"
+                                                    value={firstName}
+                                                    onChange={addFirtName}
                                                 />
                                             </div>
                                             <div className="form-outline mb-2">
@@ -45,6 +89,10 @@ function signUp() {
                                                     id="form3Example99"
                                                     className="form-control form-control-lg"
                                                     placeholder="Last Name"
+                                                    name="last_name"
+                                                    value={lastName}
+                                                    onChange={addLastName}
+
                                                 />
 
                                             </div>
@@ -57,15 +105,18 @@ function signUp() {
                                                     id="form3Example97"
                                                     className="form-control form-control-lg"
                                                     placeholder="Email"
+                                                    name="email"
+                                                    value={email}
+                                                    onChange={addEmail}
                                                 />
 
                                             </div>
-                                            
+
                                             <div className="form-outline mb-2">
                                                 <label className="form-label" htmlFor="form3Example97">
                                                     Enter Country Code
                                                 </label> <br />
-                                                <select className="select">
+                                                <select className="select" name="country_code" value={countryCode} onChange={addCountryCode}>
                                                     <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
                                                     <option data-countryCode="US" value="1">USA (+1)</option>
                                                     <optgroup label="Other countries">
@@ -295,6 +346,9 @@ function signUp() {
                                                     id="form3Example97"
                                                     className="form-control form-control-lg"
                                                     placeholder="Phone"
+                                                    name="phone"
+                                                    value={phone}
+                                                    onChange={addPhone}
                                                 />
 
                                             </div>
@@ -307,13 +361,22 @@ function signUp() {
                                                     id="form3Example97"
                                                     className="form-control form-control-lg"
                                                     placeholder="Password"
+                                                    name="password"
+                                                    value={password}
+                                                    onChange={addPassword}
                                                 />
 
                                             </div>
                                             <div className="d-flex justify-content-center pt-3">
-                                                <button type="button" className="btn normalButton btn-lg ms-2">
-                                                    Submit form
+                                                <button  type="submit"  className="btn normalButton btn-lg ms-2" onClick={()=>{
+                                                    handleSubmit()
+                                                    window.location.reload()
+                                                }}>
+                                                    Submit
                                                 </button>
+                                            </div>
+                                            <div className="d-flex justify-content-center pt-3">
+                                                <h4>Already have an account ? <Link style={{ textDecoration: "none" }} to="/login"> <span style={{ color: "#008178", cursor: "pointer" }}>Login</span> </Link> </h4>
                                             </div>
                                         </div>
                                     </div>
@@ -329,4 +392,4 @@ function signUp() {
 }
 
 
-export default signUp;
+export default SignUp;
